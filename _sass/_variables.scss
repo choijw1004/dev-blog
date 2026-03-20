@@ -91,22 +91,42 @@ $form-field-height: 2.25rem;
 $form-field-padding-y: .5rem;
 $form-field-padding-x: .5rem;
 
+// Code block
+$code-font-size: 0.65rem;
+$code-header-height: 2.25rem;
+$code-dot-size: 0.75rem;
+$code-dot-gap: 0.5rem;
+$code-icon-width: 1.75rem;
+$code-radius: 0.5rem;
+$inline-code-radius: 0.25rem;
+
+// Code colors (light)
+$highlight-bg-color: #f6f8fa;
+$language-border-color: #ececec;
+$highlighter-rouge-color: #3f596f;
+$highlight-lineno-color: #9e9e9e;
+$inline-code-bg: rgba(25, 25, 28, 0.05);
+$code-color: #3a3a3a;
+$code-header-text-color: #a3a3a3;
+$code-header-muted-color: #e5e5e5;
+$code-header-icon-color: #c9c8c8;
+
 // Code
 $pre-border-radius: 0;
 $pre-background-color: #fafafa;
-$hljs-comment: $mid-gray;
-$hljs-keyword: $dark-blue;
-$hljs-name: $dark-gray;
-$hljs-number: $dark-green;
-$hljs-string: $red;
-$hljs-title: $red;
-$hljs-type: $dark-blue;
-$hljs-tag: $dark-blue;
-$hljs-attribute: $dark-green;
-$hljs-regexp: $dark-green;
-$hljs-symbol: $purple;
-$hljs-built-in: $dark-blue;
-$hljs-preprocessor: $mid-gray;
+$hljs-comment: #6a737d;
+$hljs-keyword: #d73a49;
+$hljs-name: #6f42c1;
+$hljs-number: #005cc5;
+$hljs-string: #032f62;
+$hljs-title: #6f42c1;
+$hljs-type: #e36209;
+$hljs-tag: #22863a;
+$hljs-attribute: #005cc5;
+$hljs-regexp: #032f62;
+$hljs-symbol: #e36209;
+$hljs-built-in: #005cc5;
+$hljs-preprocessor: #6a737d;
 $hljs-deletion: $light-pink;
 $hljs-addition: $light-green;
 $hljs-change: $dark-blue;

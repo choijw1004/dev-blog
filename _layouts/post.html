@@ -23,7 +23,8 @@ layout: default
 </div>
 
 <article class="post-content">
-  {{ content }}
+  {% capture _post_content %}{{ content }}{% endcapture %}
+  {% include code-header.html content=_post_content %}
 </article>
 
 {% if site.show_sharing_icons %}

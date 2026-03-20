@@ -1,6 +1,6 @@
 ---
 layout: page
-title: About Mixyll
+title: About Choi
 permalink: /about/
 tags: about
 ---

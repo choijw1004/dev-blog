@@ -1,0 +1,32 @@
+{% assign _content = include.content %}
+
+{% if _content contains '<div class="highlight"><code>' %}
+  {% assign _snippets = _content | split: '<div class="highlight"><code>' %}
+  {% assign _new_content = '' %}
+
+  {% for _snippet in _snippets %}
+    {% if forloop.last %}
+      {% assign _new_content = _new_content | append: _snippet %}
+    {% else %}
+      {% assign _left = _snippet | split: '><' | last %}
+      {% assign _lang = _left | split: 'language-' | last | split: ' ' | first %}
+      {% capture _label_text %}{% include language-alias.html language=_lang %}{% endcapture %}
+
+      {% capture _label %}
+        <span data-label-text="{{ _label_text | strip }}"><i class="fas fa-code fa-fw" style="font-size:1rem;width:1.75rem;color:#c9c8c8"></i></span>
+      {% endcapture %}
+
+      {% assign _new_content = _new_content
+        | append: _snippet
+        | append: '<div class="code-header">'
+        | append: _label
+        | append: '</div>'
+        | append: '<div class="highlight"><code>'
+      %}
+    {% endif %}
+  {% endfor %}
+
+  {% assign _content = _new_content %}
+{% endif %}
+
+{{ _content }}

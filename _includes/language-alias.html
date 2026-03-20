@@ -1,0 +1,15 @@
+{% assign _lang = include.language | default: '' %}
+{% case _lang %}
+  {% when 'javascript', 'js' %}{{ 'JavaScript' }}
+  {% when 'typescript', 'ts' %}{{ 'TypeScript' }}
+  {% when 'python', 'py' %}{{ 'Python' }}
+  {% when 'ruby', 'rb' %}{{ 'Ruby' }}
+  {% when 'bash', 'zsh', 'sh', 'ksh' %}{{ 'Shell' }}
+  {% when 'cs', 'csharp' %}{{ 'C#' }}
+  {% when 'rs', 'rust' %}{{ 'Rust' }}
+  {% when 'php', 'php3', 'php4', 'php5' %}{{ 'PHP' }}
+  {% when 'vue', 'vuejs' %}{{ 'Vue.js' }}
+  {% when 'yml' %}{{ 'YAML' }}
+  {% when 'css', 'html', 'scss', 'json', 'xml', 'toml', 'yaml' %}{{ _lang | upcase }}
+  {% else %}{{ _lang | capitalize }}
+{% endcase %}
