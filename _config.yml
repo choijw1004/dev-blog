@@ -4,7 +4,7 @@ email:       97choijw@gmail.com
 author:      Choi Jang Woo
 description: "개발을 기록합니다."
 baseurl:     ""
-url:         "https://dev.choijw1004.site"
+url:         "https://dev.choijw1004.site/"
 date_format: "%b %-d, %Y"
 header_pages:
  - contact.html
