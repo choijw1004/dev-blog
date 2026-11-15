@@ -1,0 +1,16 @@
+{%- assign post = site.posts[page.post_index] -%}
+{%- assign title = post.title | strip_html | normalize_whitespace -%}
+{%- assign visible_title = title | truncate: 56, '…' -%}
+{%- assign first_line = visible_title | slice: 0, 28 -%}
+{%- assign second_line = visible_title | slice: 28, 28 -%}
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="150" viewBox="0 0 640 150" role="img" aria-labelledby="title desc">
+  <title id="title">{{ title | xml_escape }}</title>
+  <desc id="desc">{{ post.date | date: '%Y.%m.%d' }} · Choi's dev-log</desc>
+  <rect x="0.5" y="0.5" width="639" height="149" rx="12" fill="#ffffff" stroke="#d0d7de"/>
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif">
+    <text x="616" y="31" text-anchor="end" fill="#656d76" font-size="12">{{ post.date | date: '%Y.%m.%d' }}</text>
+    <text x="24" y="73" fill="#1f2328" font-size="18" font-weight="600">{{ first_line | xml_escape }}</text>
+    <text x="24" y="100" fill="#1f2328" font-size="18" font-weight="600">{{ second_line | xml_escape }}</text>
+    <text x="24" y="129" fill="#656d76" font-size="11">Choi's dev-log</text>
+  </g>
+</svg>

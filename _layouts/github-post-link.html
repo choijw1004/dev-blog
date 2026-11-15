@@ -1,0 +1,19 @@
+---
+layout: null
+---
+{%- assign post = site.posts[page.post_index] -%}
+{%- assign target = post.url | absolute_url -%}
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex">
+    <meta http-equiv="refresh" content="0; url={{ target | escape }}">
+    <link rel="canonical" href="{{ target | escape }}">
+    <title>{{ post.title | escape }}</title>
+  </head>
+  <body>
+    <p><a href="{{ target | escape }}">{{ post.title | escape }}</a></p>
+  </body>
+</html>
